@@ -1,4 +1,4 @@
-export function Name() { return "1STPLAYER MK8/MK8 II"; }
+export function Name() { return "1STPLAYER MK8"; }
 export function VendorId() { return 0x0416; }
 export function ProductId() { return 0xB23C; }
 export function Publisher() { return "随机复读的复读姬"; }
