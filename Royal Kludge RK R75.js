@@ -1,6 +1,6 @@
-export function Name() { return "Royal Kludge RK75"; } //名称
+export function Name() { return "Royal Kludge RK R75"; } //名称
 export function VendorId() { return 0x258A; }
-export function ProductId() { return 0x0151; }
+export function ProductId() { return 0x0151,0x015b; }
 export function Publisher() { return "Nollie"; } //发布者
 export function Size() { return [21, 7]; }
 export function DefaultPosition(){return [10, 100]; }

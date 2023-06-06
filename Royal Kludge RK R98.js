@@ -1,4 +1,4 @@
-export function Name() { return "Royal Kludge RK98"; }
+export function Name() { return "Royal Kludge RK R98"; }
 export function Publisher() { return "Nollie"; }
 export function VendorId() { return  0x258a;}  //Device's USB Vendor Id in Hex
 export function ProductId() { return 0x0143;} //Device's USB Product Id in Hex
