@@ -1,7 +1,7 @@
 export function Name() { return "DK68"; } //名称
 export function VendorId() { return 0x258A; }
 export function ProductId() { return 0x0049; }
-export function Publisher() { return "Nollie"; } //发布者
+export function Publisher() { return "随机复读的复读姬"; } //发布者
 export function Documentation() { return "gettingstarted/srgbmods-net-info"; }
 export function Size() { return [16, 5]; }
 export function DefaultPosition(){return [10, 100]; }
@@ -16,8 +16,8 @@ export function ControllableParameters() {
 }
 
 /* 
-Time:2023/2/11
-Author: Nollie(Nuonuo)
+Time:2023/6/13
+Author: 随机复读的复读姬(Skikdd)
 Version:V0.1
 */
 const vKeys = 
@@ -32,7 +32,7 @@ const vKeys =
  const vKeyPositions =[
 	[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0], [12,0],      [14,0],    [15,0], //15
 	[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[7,1],[8,1],[9,1],[10,1],[11,1], [12,1],    [14,1],      [15,1], //15
-	[0,2], [1,2],     [2,2],[3,2],[4,2],[5,2],[6,2],[7,2],[8,2],[9,2],[10,2],[11,2], [13,2],          [15,2], //14   
+	[0,2],[1,2],[2,2],[3,2],[4,2],[5,2],[6,2],[7,2],[8,2],[9,2],[10,2],[11,2],       [13,2],           [15,2], //14   
 	[0,3],      [2,3],[3,3],[4,3],[5,3],[6,3],[7,3],[8,3],[9,3],[10,3],[11,3],     [12,3],     [14,3], [15,3], //14
     [0,4],[1,4],[2,4],		            [6,4],	                [10,4],[11,4], [12,4], [13,4], [14,4], [15,4] //10
 ];
@@ -40,11 +40,11 @@ const vKeys =
 
 const vKeyNames = 
 [
-	"Esc","1","2", "3", "4", "5",  "6", "7", "8", "9", "0",  "-", "+",  "Backspace","Home", //15
-	"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\","Page Up",     //15
-	"CapsLock", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'","Enter",  "Page Down",    //14
-	"Left Shift","Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Right Shift",    "Up Arrow",   "End",   //14
-	"Left Ctrl", "Left Win", "Left Alt", "Space0", "Right Ctrl", "Fn", "Right Alt", "Left Arrow",  "Down Arrow", "Right Arrow", //10
+	"Esc", "1",  "2", "3", "4", "5",  "6", "7", "8", "9", "0",  "-",   "+",  "Backspace",	"Home",
+	"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\", "PgUp",
+	"CapsLock", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "Enter", "PgDn",
+	"Left Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Right Shift", "Up Arrow", "End",
+	"Left Ctrl", "Left Win", "Left Alt", "Space", "Right Alt", "Fn","Right Ctrl", "Left Arrow",  "Down Arrow", "Right Arrow"
 ];
 
 function initpacket1()
