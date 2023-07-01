@@ -10,9 +10,16 @@ Version:V0.1.1
 Log:修复部分按键灯珠位置
 */
 
-export function Name() { return "Kzzi k75"; }
+/* 
+Time:2023/7/2
+Author: 随机复读的复读姬
+Version:V0.1.2
+Log:添加K75Pro(性能版)支持
+*/
+
+export function Name() { return "Kzzi K75 / Kzzi K75 Pro"; }
 export function VendorId() { return 0x258A; }
-export function ProductId() { return 0x0112; }
+export function ProductId() { return [0x0112,0x0149]; }
 export function Publisher() { return "Rain"; }
 export function Documentation() { return "gettingstarted/srgbmods-net-info"; }
 export function Size() { return [16, 6]; }
