@@ -1,7 +1,7 @@
 export function Name() { return "Monka A87"; } //名称
 export function VendorId() { return 0x05AC; }
 export function ProductId() { return 0x024F; }
-export function Publisher() { return "Nollie"; } //发布者
+export function Publisher() { return "随机复读的复读姬"; } //发布者
 export function Documentation() { return "gettingstarted/srgbmods-net-info"; }
 export function Size() { return [17, 6]; }
 export function DefaultPosition(){return [10, 100]; }
