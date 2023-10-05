@@ -3,7 +3,7 @@ export function VendorId() { return 0x320f; }
 export function ProductId() { return 0x5055; }
 export function Publisher() { return "Nollie"; } 
 export function DefaultPosition(){return [120, 80];}
-export function DefaultScale(){return 8.0;}
+export function DefaultScale(){return 5.0;}
 
 export function ControllableParameters() 
 {
@@ -87,17 +87,17 @@ const boards =
 						73, 74, 75, 77, 78, 79, 80, 81, 82, 85, 89, 90, 92,
 						93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104,
 						105, 106, 107, 108, 109, 110, 111, 128, 129],
-		vKeyPositions:  [[0, 0], [2, 0], [3, 0], [4, 0], [5, 0], [7, 0], [8, 0], [9, 0], [10, 0], [12, 0],
-						[13, 0], [14, 0], [15, 0], [17, 0], [18, 0], [19, 0], [0, 1], [1, 1], [2, 1], [3, 1],
-						[4, 1], [5, 1], [6, 1], [7, 1], [8, 1], [9, 1], [10, 1], [11, 1], [12, 1], [14, 1],
-						[20, 0], [16, 0], [1, 2], [2, 2], [3, 2], [4, 2], [5, 2], [6, 2], [7, 2], [8, 2],
-						[9, 2], [10, 2], [11, 2], [12, 2], [13, 2], [14, 2], [1, 3], [2, 3], [3, 3], [4, 3], 
-						[5, 3], [6, 3], [7, 3], [8, 3], [9, 3], [10, 3], [11, 3], [12, 3], [13, 3], [1, 4], 
-						[2, 4], [3, 4], [4, 4], [5, 4], [6, 4], [7, 4], [8, 4], [9, 4], [10, 4], [11, 4], [12, 4],
-						[16, 4], [17, 4], [0, 5], [1, 5], [2, 5], [6, 5], [10, 5], [11, 5], [12, 5], [15, 5], [16, 5],
-						[17, 5], [17, 1], [18, 1], [19, 1], [20, 1], [17, 2], [18, 2], [19, 2], [17, 3], [18, 3], [19, 3], 
-						[20, 3], [18, 4], [19, 4], [18, 5], [19, 5], [20, 5], [20, 4], [20, 2]],
-		size: 			[21, 6]
+		vKeyPositions:  [[1, 0], [5, 0], [8, 0], [11, 0], [14, 0], [18, 0], [21, 0], [24, 0], [27, 0], [31, 0],
+						[34, 0], [37, 0], [40, 0], [49, 0] , [52, 0], [55, 0], [1, 4], [4, 4], [7, 4], [10, 4],
+						[13, 4], [15, 4], [19, 4], [22, 4], [25, 4], [28, 4], [31, 4], [34, 4], [37, 4], [42, 4],
+						[58, 0], [44, 0], [1, 7], [5, 7], [8, 7], [11, 7], [14, 7], [17, 7], [20, 7], [23, 7],
+						[26, 7], [29, 7], [32, 7], [35, 7], [38, 7], [42, 7], [2, 10], [6, 10], [9, 10], [12, 10], 
+						[15, 10], [18, 10], [21, 10], [24, 10], [27, 10], [30, 10], [33, 10], [36, 10], [41, 10], [2, 13], 
+						[7, 13], [10, 13], [13, 13], [16, 13], [19, 13], [22, 13], [25, 13], [28, 13], [31, 13], [34, 13], [38, 13],
+						[44, 14], [49, 13], [1, 16], [5, 16], [9, 16], [20, 16], [30, 16], [33, 16], [36, 16], [41, 17], [44, 17],
+						[47, 17], [49, 4], [52, 4], [55, 4], [58, 4], [49, 7], [52, 7], [55, 7], [49, 10], [52, 10], [55, 10], 
+						[58, 9], [52, 13], [55, 13], [52, 16], [55, 16], [58, 15], [58, 13], [58, 7]],
+		size: 			[61, 18]
 	},
 	N75Pro:{
 		name: "N75Pro",
@@ -201,7 +201,9 @@ function led_show()
 /*init key*/
 export function Size() 
 {
-	return boards[boardModel].size;
+	device.log('@Size');
+	// device.log( boards[boardModel]);
+	// return boards[boardModel].size;
 }
 
 export function LedNames() 
@@ -226,8 +228,9 @@ export function onboardModelChanged ()
 	vKeys = boards[boardModel].vKeys;
 
 	device.setName(boards[boardModel].name);
-	device.log(`Model set to: ` + boards[boardModel].name);
 	device.setControllableLeds(vKeyNames, vKeyPositions);
+	device.setSize(boards[boardModel].size);
+	device.log(`Model set to: ` + boards[boardModel].name);
 	device.log('@Nuonuo');
 }
 
@@ -240,6 +243,7 @@ export function Initialize()
 
 	device.setControllableLeds(vKeyNames, vKeyPositions);
 	device.setName(boards[boardModel].name);
+	device.setSize(boards[boardModel].size);
 	device.log(`Model set to: ` + boards[boardModel].name);
 	key_init();
 	device.log('@Nuonuo V1.0');
