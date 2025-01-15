@@ -5,13 +5,20 @@ Part of the keyboard was written in the early days, which did not follow the spe
 Consolidation of keyboard plug-ins of the same brand
 
 VGN Series.js
-VGN N75
-VGN N75 Pro
 VGN V98Pro
+VGN V98Pro_V2
 VGN S99
+VGN N75
+VGN N75Pro
+Wob_Rainy75
+VXE_V87_need off light strip
+VTK_V75X
 
-Aula Series.js
-AulaF75
-AulaF99
-AulaF87
-AulaF87Pro
+Aula & Mchose Series.js
+Aula_F99 
+Aula_F87
+Aula_F87Pro
+Aula_F75
+Mchose_X75
+Mchose_K99
+Mchose_G98
